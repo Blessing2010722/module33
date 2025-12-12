@@ -1,16 +1,19 @@
-class squre:
-    def__init__(self, side):
-        self.side = side
-    def area(self):
-        print("my area is : ",self.side**2")
+class computer:
+    def__init__(self):
+        self.__MAX_PRICE=7000
+    def sell(self):
+        print("sellling price: {}".format(self.__max_price"))
 
-class circle:
-    def__init__(self,radius):
-        self.radius = radius
-    def area(self):
-        print("my area is : ",3.1416*self.raduis")
-mysqure = squre(5)
-myraduis = circle(5)
 
-fo shape in (mysqure,myraduis):
-   shape.area()
+    def setmaxprice(self,price):
+        self.__max_price = price
+    
+c = computer()
+c.sell()
+
+c.__max_price = 1000
+print("attempting to change price directly.")
+c.sell()
+print("changing price using the setter function.")
+c.setmaxprice(1000)
+c.sell()
